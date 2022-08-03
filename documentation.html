@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="documentation.css">
+</head>
+
+<body class="body">
+    <nav id="navbar">
+        <header id="nav-header">CSS Documentation</header>
+        <li class="introduction">
+            <a href="#Introduction" class="nav-link">Introduction</a>
+        </li>
+        <hr>
+        <li>
+            <a href="#what_you_should_already_know" class="nav-link">What you should already know</a>
+        </li>
+        <hr>
+        <li>
+            <a href="#CSS_Basics" class="nav-link">CSS Basics</a>
+        </li>
+        <hr>
+        <li>
+            <a href="#CSS_selectors" class="nav-link">CSS selectors</a>
+        </li>
+        <hr>
+        <li>
+            <a href="#Type_class_and_ID_selectors" class="nav-link">Type class and ID selectors</a>
+        </li>
+        <hr>
+        <li>
+            <a href="#Attribute_selectors" class="nav-link">Attribute selectors</a>
+        </li>
+        <hr>
+        <li>
+            <a href="#Pseudo_classes_and_elements" class="nav-link">Pseudo classes and elements</a>
+        </li>
+        <hr>
+        <li>
+            <a href="#Combinators" class="nav-link">Combinators</a>
+        </li>
+        <hr>
+        <li>
+            <a href="#CSS_Properties" class="nav-link">CSS Properties</a>
+        </li>
+        <hr>
+        <li>
+            <a href="#CSS_Values" class="nav-link">CSS Values</a>
+        </li>
+        <hr>
+    </nav>
+    <main id="main-doc">
+        <section id="Introduction" class="main-section">
+            <header >Introduction</header>
+            <article>
+                <p>
+                    Cascading Style Sheets (CSS) is a stylesheet language used to describe the presentation of a
+                    document
+                    written in HTML or XML (including XML dialects such as SVG, MathML or XHTML). CSS describes how
+                    elements
+                    should be rendered on screen, on paper, in speech, or on other media.
+                </p>
+                <p>
+                    CSS is among the core languages of the open web and is standardized across Web browsers according to
+                    W3C specifications. Previously, development of various parts of CSS specification was done
+                    synchronously, which allowed versioning of the latest recommendations. You might have heard about
+                    CSS1, CSS2.1, CSS3. However, CSS4 has never become an official version
+                </p>
+            </article>
+        </section>
+        <section id="what_you_should_already_know" class="main-section">
+            <header>What you should already know</header>
+            <article>
+                <p>This guide assumes you have the following basic background:
+                </p>
+                <ul>
+                    <li>A general understanding of the Internet and the World Wide Web (WWW).
+                    </li>
+                    <li>Good working knowledge of HyperText Markup Language (HTML).
+                    </li>
+                </ul>
+            </article>
+        </section>
+        <section id="CSS_Basics" class="main-section">
+            <header>CSS Basics</header>
+            <article>
+                <p>CSS (Cascading Style Sheets) is the code that styles web content. CSS basics walks through what you
+                    need to get started. We'll answer questions like: How do I make text red? How do I make content
+                    display at a certain location in the (webpage) layout? How do I decorate my webpage with background
+                    images and colors?</p>
+                <p>Like HTML, CSS is not a programming language. It's not a markup language either. CSS is a style sheet
+                    language. CSS is what you use to selectively style HTML elements. For example, this CSS selects
+                    paragraph text, setting the color to red
+                </p>
+                <p>
+                    there are Three mathods of applying CSS to our document, which are:
+                </p>
+                <ul>
+                    <li>External CSS</li>
+                    <li>Internal CSS</li>
+                    <li>Inline CSS</li>
+                </ul>
+                <h3>
+                    External CSS
+                </h3>
+                <p>
+                    An external stylesheet contains CSS in a separate file with a .css extension. This is the most
+                    common and useful method of bringing CSS to a document. You can link a single CSS file to multiple
+                    web pages, styling all of them with the same CSS stylesheet
+                </p>
+                <code>
+                    <p><span><</span><span>head</span><span>></span></p>
+                <p> <span><</span><span>link</span> <span>rel="stylesheet"</span> <span>href="styles.css"</span><span>></span></p>                    
+                <p><span><</span><span>/</span><span>head</span><span>></span></p> 
+                </code>
+
+                <p>The Style sheet might look like this:</p>
+                <code>
+                    h1 {<br>
+                        color: blue; <br>
+                        background-color: yellow;<br>
+                        border: 1px solid black; <br>
+                      }
+                </code>
+                <h3>
+                    Internal CSS
+                </h3>
+                <p>
+                    An internal stylesheet resides within an HTML document. To create an internal stylesheet, you place
+                    CSS inside a style element contained inside the HTML head.
+                </p>
+                <p>it might look like this:</p>
+                <code>
+                    <p><span><</span>html<span>></span></p> 
+                    <p><span><</span><span>head</span><span>></span></p>
+                    <p><span><</span>style<span>></span></p>
+                   h<span>1</span> {<br>
+                        color: blue; <br>
+                        background-color: yellow; <br>
+                        border: 1px solid black;<br>
+                      }<br>
+                
+                      p {<br>
+                        color: red;<br>
+                      }
+                    <p><span><</span><span>/</span>style<span>></span></p>
+
+                    <p><span><</span><span>/</span><span>head</span><span>></span></p>
+                    <p><span><</span>body<span>></span></p>
+                    <p><span><</span><span>h1</span><span>></span> I'm styled blue with a black background <span><</span><span>/</span>h1<span>></span></p>
+                    <p><span><</span><span>p></span> change my color to red <span><</span><span>/</span><span>p></span></p>
+                    <p><span><</span><span>/</span>body<span>></span> </p>  
+                    <p><span><</span><span>/</span> html<span>></span></p> 
+                </code>
+                <h3>
+                    Inline CSS
+                </h3>
+                <p>
+                    Inline styles are CSS declarations that affect a single HTML element, contained within a style
+                    attribute. The implementation of an inline style in an HTML document might look like this:
+                </p>
+                <code>
+                    <p><span><</span>html<span>></span></p> 
+                    <p><span><</span><span>head</span><span>></span></p>
+                    <p><span><</span><span>/</span><span>head</span><span>></span></p>
+                    <p><span><</span>body<span>></span></p>
+                    <p><span><</span><span>h1</span> <span>style="color:blue; background-color:yellow; border:1px solid black;"</span><span>></span> I'm styled blue with a black background <span><</span><span>/</span>h1<span>></span></p>
+                    <p><span><</span><span>p</span> <span>style="color:red;"</span><span>></span> change my color to red <span><</span><span>/</span><span>p></span></p>
+                    <p><span><</span><span>/</span>body<span>></span> </p>  
+                    <p><span><</span><span>/</span> html<span>></span></p> 
+                </code>
+                <p><strong>Avoid using CSS in this way, when possible</strong>. It is the opposite of a best practice.
+                    First, it is the
+                    least efficient implementation of CSS for maintenance. One styling change might require multiple
+                    edits within a single web page. Second, inline CSS also mixes (CSS) presentational code with HTML
+                    and content, making everything more difficult to read and understand. Separating code and content
+                    makes maintenance easier for all who work on the website.</p>
+            </article>
+        </section>
+        <section id="CSS_selectors" class="main-section">
+            <header>CSS selectors</header>
+            <p>In CSS, selectors are used to target the HTML elements on our web pages that we want to style. There are
+                a wide variety of CSS selectors available, allowing for fine-grained precision when selecting elements
+                to style. In this article and its sub-articles we'll run through the different types in great detail,
+                seeing how they work.
+            </p>
+            <p>
+                A CSS selector is the first part of a CSS Rule. It is a pattern of
+                elements and other terms that tell the browser which HTML elements should be selected to have the CSS
+                property values inside the rule applied to them. The element or elements which are selected by the
+                selector are referred to as the subject of the selector.
+            </p>
+            <h3>
+                Types of selectors
+            </h3>
+            <p>Each CSS rule starts with a selector — or a list of selectors — in order to tell the browser which
+                element or elements the rules should apply to. All the examples below are valid selectors or lists of
+                selectors There are a few different groupings of selectors, and knowing which type of selector you might
+                need will help you to find the right tool for the job. In this article's subarticles we will look at the
+                different groups of selectors in more detail.</p>
+            <ul>
+                <li>Type, class, and ID selectors</li>
+                <li>Attribute selectors</li>
+                <li>Pseudo-classes and pseudo-elements</li>
+                <li>Combinators</li>
+            </ul>
+        </section>
+        <section id="Type_class_and_ID_selectors" class="main-section">
+            <header>Type class and ID selectors</header>
+            <p>This group includes selectors that target an HTML element such as an <<span>h1</span><span>></span>.
+            </p>
+            <code>
+                <span>h1{</span><br>
+                    <span>//</span> declare a css rule <span>//</span> <br>
+                    <span>}</span>
+            </code>
+            <p>
+                It also includes selectors which target a class:
+            </p>
+            <code>
+                <span>.container{</span><br>
+                    <span>//</span> declare a css rule <span>//</span> <br>
+                    <span>}</span>
+            </code>
+            <p>
+                It also includes selectors which target an ID:
+            </p>
+            <code>
+                <span>#unique{</span><br>
+                    <span>//</span> declare a css rule <span>//</span> <br>
+                    <span>}</span>
+            </code>
+        </section>
+        <section id="Attribute_selectors" class="main-section">
+            <header>Attribute selectors</header>
+            <p>This group of selectors gives you different ways to select elements based on the presence of a certain
+                attribute on an element:
+            </p>
+            <code>
+                <span>a[title]{</span><br>
+                    <span>//</span> declare a css rule <span>//</span> <br>
+                    <span>}</span>
+            </code>
+            <p>Or even make a selection based on the presence of an attribute with a particular value:
+            </p>
+            <code>
+                <span>a[href="https://example.com"]{</span> <br>
+                <span>//</span> declare a css rule <span>//</span> <br>
+                <span>}</span>   
+            </code>
+        </section>
+        <section id="Pseudo_classes_and_elements" class="main-section">
+            <header>Pseudo classes and elements</header>
+            <p>This group of selectors includes pseudo-classes, which style certain states of an element. The :hover
+                pseudo-class for example selects an element only when it is being hovered over by the mouse pointer:
+            </p>
+            <code>
+                <span> a :hover{</span> <br>
+                <span>//</span> declare a css rule <span>//</span> <br>
+                <span>}</span>   
+            </code>
+            <p>
+                It also includes pseudo-elements, which select a certain part of an element rather than the element
+                itself. For example, ::first-line always selects the first line of text inside an element (a <<span>
+                    p</span>> in the below case), acting as if a <<span></span> span <span>></span> was wrapped around
+                        the first formatted line and then selected.
+            </p>
+            <code>
+                <span> p ::first-line{</span> <br>
+                <span>//</span> declare a css rule <span>//</span> <br>
+                <span>}</span>   
+            </code>
+        </section>
+        <section id="Combinators" class="main-section">
+            <header>Combinators</header>
+            <p>
+                The final group of selectors combine other selectors in order to target elements within our documents.
+                The following, for example, selects paragraphs that are direct children of <<span>article</span>>
+                    elements using the child combinator (>):
+            </p>
+            <code>
+                <span> article > p{</span> <br>
+                <span>//</span> declare a css rule <span>//</span> <br>
+                <span>}</span>   
+            </code>
+        </section>
+        <section id="CSS_Properties" class="main-section">
+            <header>CSS Properties</header>
+            <p>
+                Setting CSS properties to specific values is the core function of the CSS language. A property and value
+                pair is called a declaration, and any CSS engine calculates which declarations apply to every single
+                element of a page in order to appropriately lay it out, and to style it
+            </p>
+            <p>The property which is an identifier, that is a human-readable name, that defines which feature is
+                considered.</p>
+            <code>
+                <span>#unique{</span> <span>//</span> ID selector <span>//</span> <br>
+                    <span class="red-span">background-color</span>: red<span>//</span> Properties in red <span>//</span> <br>
+                    <span>}</span>
+            </code>
+            <p>Read more about CSS properties on <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Syntax"
+                    target="_blank">MDN</a>
+            </p>
+        </section>
+        <section id="CSS_Values" class="main-section">
+            <header>CSS Values</header>
+            <p> The basic goal of the Cascading Stylesheet (CSS) language is to allow a browser engine to paint elements
+                of the page with specific features, like colors, positioning, or decorations. The value which describe
+                how the feature must be handled by the engine. Each property has a set of valid values, defined by a
+                formal grammar, as well as a semantic meaning, implemented by the browser engine.
+            </p>
+            <code>
+                <span>.Box{</span> <span>//</span> Class selector <span>//</span> <br>
+                    background-color<span class="red-span">: red;  </span> <span>//</span> value in red <span>//</span> <br>
+                    <span>}</span>
+            </code>
+            <p>Read more about CSS values on <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Syntax"
+                    target="_blank">MDN</a>
+            </p>
+            <h4 id="references">
+                References
+            </h4>
+            <p>all the documentation in this page is taken from <a href="https://developer.mozilla.org/en-US/">MDN</a>
+            </p>
+
+        </section>
+    </main>
+</body>
+
+</html>

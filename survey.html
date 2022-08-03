@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+        <h1 id="title">FreeCodeCamp Survey Form</h1>
+        <p id="description">thank you for taking out your precious time to help us toward improving the platform</p>
+
+        <form action="" id="survey-form">
+            <label for="name" id="name-label">Name</label>
+            <br>
+            <input type="text" id="name" placeholder="Enter your name" required>
+            <br>
+            <label for="email" id="email-label">Email</label>
+            <br>
+            <input type="email" id="email" placeholder="Enter your Email" required>
+            <br>
+            <label for="number" id="number-label">Age</label>
+            <br>
+            <input type="number" id="number" placeholder="Enter your Age:" min="15" max="80" required>
+            <br>
+            <label for="dropdown">Choose Role</label>
+            <br>
+            <select name="role" id="dropdown">
+                <option value="Frontend">Frontend Engineering</option>
+                <option value="Backend">Backend Engineering</option>
+                <option value="Cloud Engineering">Cloud Engineering</option>
+                <option value="Full Stack">Full Stack</option>
+            </select>
+            <h3>Gender</h3>
+            <input type="radio" name="sex" value="Male" id="Male" style="height: 20px; width: 20px;">
+            <label for="Male">Male</label>
+            <br>
+            <input type="radio" name="sex" value="Female" id="Female" style="height: 20px; width: 20px;">
+            <label for="Female">Female</label>
+            <br>
+            <input type="radio" name="sex" value="Rather not say" id="Rather"  style="height: 20px; width: 20px;">
+            <label for="Rather">Rather not say</label>
+            <br>
+            <h3>What is your favorite(s) FreeCodeCamp feature(s)?</h3>
+            <input type="checkbox" value="Project" id="Project"  style="height: 20px; width: 20px;">
+            <label for="Project">Project</label>
+            <br>
+            <input type="checkbox" value="Community" id="Community"  style="height: 20px; width: 20px;">
+            <label for="Community">Community</label>
+            <br>
+            <input type="checkbox" value="Open Source" id="Open"  style="height: 20px; width: 20px;">
+            <label for="Open">Open Source</label>
+
+            <h3>what improvemnt would you like to see?</h3>
+
+            <input type="checkbox" value="Frontend Project" id="Frontend"  style="height: 20px; width: 20px;">
+            <label for="Frontend">Frontend Project</label>
+            <br>
+            <input type="checkbox" value="Backend Project" id="Backend"  style="height: 20px; width: 20px;">
+            <label for="Backend">Backend Project</label>
+            <br>
+            <input type="checkbox" value="Data Visualization" id="Data"  style="height: 20px; width: 20px;">
+            <label for="Data">Data Visualization</label>
+            <br>
+            <input type="checkbox" value="Open Source" id="Open"  style="height: 20px; width: 20px;">
+            <label for="Open">Open Source </label>
+            <br>
+            <input type="checkbox" value="Forum" id="Forum"  style="height: 20px; width: 20px;">
+            <label for="Forum">Forum</label>
+            <br>
+            <label for="textarea">Additional comments here</label>
+            <br>
+            <textarea name="comment" id="textarea" cols="30" rows="5" placeholder="Enter your Comments here..." ></textarea>
+            <br>
+            <button id="submit">submit</button>
+        </form>
+</body>
+
+</html>
