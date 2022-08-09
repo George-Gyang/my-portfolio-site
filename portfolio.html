@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,28 +8,86 @@
     <link rel="stylesheet" href="portfolio.css">
     <title>portfolio page</title>
 </head>
+
 <body>
     <nav id="navbar">
         <ul>
-            <li><a href="">About</a></li>
-            <li><a href=""></a>Projects</li>
-            <li><a href=""></a>Contact</li>
-            <li><a href=""></a>Strength</li>
+            <li><a href="#welcome-section">About</a></li>
+            <li><a href="#project">Projects</a></li>
+            <li><a href="#profile-link">Contact</a></li>
         </ul>
     </nav>
     <main>
         <section id="welcome-section">
-            <h1>I'm George</h1>
+            <div>
+                <div id="main-head">
+                    <h1> Hello, I'm George</h1>
+                </div>
+                <p>
+                    As a web Developer, I specialized in frontend development
+                </p>
+            </div>
         </section>
-        <section id="projects">
-            <div id="project-tile">
-                my projects here at least one link to a project
+        <section id="project">
+            <div class="project-tile">
+                <figure>
+                    <a href="https://score-keeper-project.george-gyang.repl.co"><img
+                            src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1561573077l/49932589._SX0_SY0_.jpg"
+                            alt="" style="min-width: 400px; height: 400px;">
+                    </a>
+                    <h2>Score Keeping Card</h2>
+                </figure>
+
+                <figure>
+                    <a href="https://Check-network-type.george-gyang.repl.co"><img
+                            src="https://cresthub.com/wp-content/uploads/2021/07/20210603-141632picmtnairtel.jpg"
+                            alt="network providers logo" style="max-width: 400px; height: 400px;"></a>
+                    <h2>Phonie App</h2>
+                </figure>
+            </div>
+            <div class="project-tile">
+                <figure>
+                    <a href="https://github.com/George-Gyang/demo-project"><img
+                            src="https://raw.githubusercontent.com/yesinteractive/dad-jokes_microservice/master/public/dadjokes-microservice.png"
+                            alt="jokes API logo" style="max-width: 400px; height: 400px;"></a>
+                    <h2> Dads jokes API</h2>
+                </figure>
+
+                <figure>
+                    <a href="https://github.com/George-Gyang/TV-shows-search-API"><img
+                            src="https://tvmazecdn.com/uploads/images/original_untouched/10/26150.jpg"
+                            alt="Tv shows viewer" style="max-width: 400px; height: 400px;"></a>
+                    <h2>TV shows API</h2>
+                </figure>
             </div>
         </section>
         <footer>
-            <a href="#" id="profile-link" target="_blank">GitHub profile</a>
+            <div>
+                <div>
+                    <h3>Let's get Connected</h3>
+                    <p>
+                        Together we can do wonders
+                    </p>
+                </div>
+                <div class="socials">
+                    <a href="https://github.com/George-Gyang" id="profile-link" target="_blank"><img
+                            src="https://cdn4.iconfinder.com/data/icons/iconsimple-logotypes/512/github-512.png"
+                            alt="GitHub logo" style="height: 30px; width:30px;"> </a>
+
+                    <a href="https://www.linkedin.com/in/george-gyang-james-/" class="profile-links"
+                        target="_blank"><img
+                            src="https://www.freepnglogos.com/uploads/linkedin-blue-style-logo-png-0.png"
+                            alt="linkedIn logo" style="height: 30px; width:30px;"></a>
+                            
+                    <a href="https://twitter.com/gyang_george" class="profile-links" target="_blank"><img
+                            src="https://www.pngkey.com/png/full/2-27646_twitter-logo-png-transparent-background-logo-twitter-png.png"
+                            alt="twitter logo" style="height: 30px; width:30px;"></a>
+
+                </div>
+            </div>
         </footer>
     </main>
-    
+
 </body>
+
 </html>
